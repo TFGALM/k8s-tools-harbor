@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc-harbor-jobservice
+  namespace: harbor
+  labels:
+    app: pv-harbor-jobservice
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: local-storage
+  resources:
+    requests:
+      storage: 5Gi
+  volumeName: pv-harbor-jobservice
+
